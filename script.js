@@ -1,11 +1,26 @@
-function changeStyle() {
-    const link = document.querySelector('link[rel="stylesheet"]');
-    if (!link) return;
+document.addEventListener("DOMContentLoaded", () => {
+    const savedStyle = localStorage.getItem("stylesheet");
+    const link = document.getElementById("style");
 
-    const href = link.getAttribute('href');
-    if (href.includes('style1.css')) {
-        link.setAttribute('href', href.replace('style1.css', 'style2.css'));
-    } else if (href.includes('style2.css')) {
-        link.setAttribute('href', href.replace('style2.css', 'style1.css'));
+    if (savedStyle && link) {
+        link.setAttribute("href", savedStyle);
+    }
+});
+
+function changeStyle() {
+    const link = document.getElementById("style");
+
+    const href = link.getAttribute("href");
+    let newHref;
+
+    if (href.includes("style1.css")) {
+        newHref = href.replace("style1.css", "style2.css");
+    } else if (href.includes("style2.css")) {
+        newHref = href.replace("style2.css", "style1.css");
+    }
+
+    if (newHref) {
+        link.setAttribute("href", newHref);
+        localStorage.setItem("stylesheet", newHref);
     }
 }
