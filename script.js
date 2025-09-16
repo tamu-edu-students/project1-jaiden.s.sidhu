@@ -24,3 +24,7 @@ function changeStyle() {
         localStorage.setItem("stylesheet", newHref);
     }
 }
+
+function toggleSidebar() {
+  document.querySelector('.sidebar').classList.toggle('show');
+}
