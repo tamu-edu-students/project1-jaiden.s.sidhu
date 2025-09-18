@@ -202,6 +202,17 @@ button:hover {
   text-align: left;
 }
 
+.project a {
+  color: #500000;
+  text-decoration: underline;
+}
+
+.qualifications-summary{
+  flex: 1 1 100%;
+  padding: 30px;
+  text-align: center;
+}
+
 .volunteer-excerpt, .volunteer-examples {
   background: #500000;
   color: #fff;
@@ -209,6 +220,7 @@ button:hover {
   margin: 2rem 0;
   border: 2px solid #d3d3d3;
   transition: 0.2s;
+  text-align: center;
 }
 
 .volunteer-excerpt h3,
@@ -227,6 +239,11 @@ button:hover {
   color: #000;
   margin: 0.7rem 0;
   padding: 0.7rem 1rem;
+}
+
+.volunteer-examples a {
+  color: #500000;
+  text-decoration: underline;
 }
 
 .volunteer-excerpt:hover, .volunteer-examples:hover {

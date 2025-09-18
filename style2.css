@@ -139,7 +139,7 @@ p {
 a {
     color: #fdf6ec;
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: underline;
     transition: all 0.2s;
 }
 
